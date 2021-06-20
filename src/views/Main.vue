@@ -3,6 +3,7 @@
     <Header />
     <main>
       <BasicContent />
+      <ContentBlock />
     </main>
   </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
 import Header from '@/components/Header'
 import BasicContent from '@/components/BasicContent'
+import ContentBlock from '@/components/ContentBlock'
 
 
 export default {
@@ -23,7 +25,8 @@ export default {
   name: 'Home',
   components: {
     Header,
-    BasicContent
+    BasicContent,
+    ContentBlock
   },
   methods: {
     

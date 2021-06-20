@@ -47,7 +47,6 @@ export default {
     padding: 0;
 }
 #app {
-    background-color: #0b0b0b;
     /* background-image: url("assets/img/BG.png"); */
     color: #fff;
 }
