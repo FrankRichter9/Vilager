@@ -69,6 +69,8 @@ export default {
         padding: 13px 85px;
 
         color: #fff;
+
+        border-radius: 4px;
     }
 
     .action:hover {

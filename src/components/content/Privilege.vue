@@ -1,12 +1,16 @@
 <template>
-  <div class="container">
-      <ul class="privilege-list">
-          <PrivilegeItem
-            v-for="i in 8"
-            :key="i"
-           />
-      </ul>
-  </div>
+    <article class="content-block">
+        <div class="container">
+            <ul class="privilege-list">
+                <PrivilegeItem
+                    v-for="i in 8"
+                    :key="i"
+                />
+            </ul>
+        </div>
+
+        <img src="@/assets/contentBlock/transition.png" alt="" class="transition">
+    </article>
 </template>
 
 <script>
@@ -22,6 +26,17 @@ export default {
 </script>
 
 <style scoped>
+    .transition{
+        display: block;
+        width: 100%;
+        padding: 40px 0 0 0;
+    }
+
+    .content-block{
+
+    }
+
+
     .privilege-list{
         list-style: none;
 
@@ -30,7 +45,7 @@ export default {
 
         max-width: 1100px;
 
-        padding: 0 0 37px 0;
+        padding: 0 0 17px 0;
         overflow-x: scroll;
     }
 
@@ -100,5 +115,9 @@ export default {
         height: 0;
         /* border-width: 7px 0 7px 14px; */
         color:blue;
+    }
+
+    .privilege-list li:last-child {
+        margin: 0;
     }
 </style>

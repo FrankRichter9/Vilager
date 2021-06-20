@@ -5,6 +5,7 @@
       <BasicContent />
       <ContentBlock />
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Header from '@/components/Header'
 import BasicContent from '@/components/BasicContent'
 import ContentBlock from '@/components/ContentBlock'
+import Footer from '@/components/Footer'
 
 
 export default {
@@ -26,7 +28,8 @@ export default {
   components: {
     Header,
     BasicContent,
-    ContentBlock
+    ContentBlock,
+    Footer
   },
   methods: {
     

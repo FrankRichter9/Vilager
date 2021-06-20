@@ -2,7 +2,7 @@
   <nav>
       <div class="container">
       <ul class="nav-list">
-          <li class="nav-item">
+          <li class="nav-item active-item">
               <a href="#" class="item-href">
                   Привилегии
               </a>
@@ -60,5 +60,8 @@ export default {
     font-size: 42px;
 
     color: #929292;
+}
+.active-item a{
+    color: #000;
 }
 </style>
