@@ -2,26 +2,42 @@
   <nav>
       <div class="container">
       <ul class="nav-list">
-          <li class="nav-item active-item">
-              <a href="#" class="item-href">
+          <li class="nav-item"
+            :class="{active_item: active === 'privel'}"
+          >
+              <a href="#" class="item-href"
+                @click.prevent="active = 'privel'; $emit('display', 'privel');"
+              >
                   Привилегии
               </a>
           </li>
 
-          <li class="nav-item">
-              <a href="#" class="item-href">
+          <li class="nav-item"
+            :class="{active_item: active === 'game'}"
+          >
+              <a href="#" class="item-href"
+                @click.prevent="active = 'game'; $emit('display', 'game');"
+              >
                   Игровые товары
               </a>
           </li>
 
-          <li class="nav-item">
-              <a href="#" class="item-href">
+          <li class="nav-item"
+            :class="{active_item: active === 'case'}"
+          >
+              <a href="#" class="item-href"
+                @click.prevent="active = 'case'"
+              >
                   Кейсы
               </a>
           </li>
 
-          <li class="nav-item">
-              <a href="#" class="item-href">
+          <li class="nav-item"
+            :class="{active_item: active === 'any'}"
+          >
+              <a href="#" class="item-href"
+                @click.prevent="active = 'any'"
+              >
                   Разное
               </a>
           </li>
@@ -34,6 +50,11 @@
 
 export default {
     name: 'ContentNav',
+    data(){
+        return{
+            active: 'privel'
+        }
+    }
 }
 
 </script>
@@ -61,7 +82,7 @@ export default {
 
     color: #929292;
 }
-.active-item a{
+.active_item a{
     color: #000;
 }
 </style>

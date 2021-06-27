@@ -2,7 +2,8 @@
   <nav class="footer-nav">
       <ul class="footer-nav__list">
           <li class="footer-list__item">
-              <a href="">Политика конфиденциальности</a>
+              <router-link to="/politics">Политика конфиденциальности</router-link>
+              <a href=""></a>
           </li>
 
           <li class="footer-list__item">

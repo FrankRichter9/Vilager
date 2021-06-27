@@ -2,8 +2,7 @@
   <div>
     <Header />
     <main>
-      <BasicContent />
-      <ContentBlock />
+        <StartPlay />
     </main>
     <Footer />
   </div>
@@ -11,10 +10,8 @@
 
 <script>
 import Header from '@/components/Header'
-import BasicContent from '@/components/BasicContent'
-import ContentBlock from '@/components/ContentBlock'
 import Footer from '@/components/Footer'
-
+import StartPlay from '@/components/StartPlay'
 
 export default {
   data(){
@@ -24,12 +21,11 @@ export default {
   },
 
 
-  name: 'Home',
+  name: 'HowStartPlay',
   components: {
     Header,
-    BasicContent,
-    ContentBlock,
-    Footer
+    Footer,
+    StartPlay,
   },
   methods: {
     
@@ -38,5 +34,7 @@ export default {
 </script>
 
 <style>
-
+.white{
+    height: 500px;
+}
 </style>

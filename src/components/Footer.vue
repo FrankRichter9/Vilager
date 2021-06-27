@@ -1,5 +1,6 @@
 <template>
   <footer class="main-footer">
+
       <div class="container">
           <FooterNav />
           <FooterInfo />
@@ -22,6 +23,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 .main-footer{
     background-color: rgba(20, 20, 20, 1);
     height: 140px;

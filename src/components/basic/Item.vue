@@ -1,5 +1,7 @@
 <template>
-  <li class="main-items-list__item">
+  <li class="main-items-list__item"
+    @click="popup.active = !popup.active"
+  >
         <div class="hover">верстак появится чуточку позже</div>
       
         <div class="color-square">
@@ -10,14 +12,25 @@
             Попытай удачу и скрафти самую топовую привилегию!
         </span>
 
-        
+        <BasicPopup v-show="popup.active"/>
     </li>
 </template>
 
 <script>
+import BasicPopup from '@/components/basic/BasicPopup'
 
 export default {
     name: '',
+    data(){
+        return {
+            popup: {
+                active: false,
+            }
+        }
+    },
+    components: {
+        BasicPopup
+    }
 }
 
 </script>

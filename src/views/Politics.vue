@@ -2,8 +2,7 @@
   <div>
     <Header />
     <main>
-      <BasicContent />
-      <ContentBlock />
+      <PrivacyPolicy />
     </main>
     <Footer />
   </div>
@@ -11,10 +10,8 @@
 
 <script>
 import Header from '@/components/Header'
-import BasicContent from '@/components/BasicContent'
-import ContentBlock from '@/components/ContentBlock'
 import Footer from '@/components/Footer'
-
+import PrivacyPolicy from '@/components/PrivacyPolicy'
 
 export default {
   data(){
@@ -24,12 +21,11 @@ export default {
   },
 
 
-  name: 'Home',
+  name: 'Politics',
   components: {
     Header,
-    BasicContent,
-    ContentBlock,
-    Footer
+    Footer,
+    PrivacyPolicy
   },
   methods: {
     

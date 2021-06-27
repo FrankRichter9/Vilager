@@ -3,39 +3,40 @@
       <div class="container">
       <ul class="nav__list">
           <li>
-              <a href="#" class="nav__href">
+              
+              <router-link to="" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/Main.png" alt="" class="nav__img">
                     <span class="nav__name">Магазин</span>
                 </div>
-              </a>
+              </router-link>
           </li>
 
           <li>
-              <a href="#" class="nav__href">
+              <router-link to="/HowStartToPlay" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/HowStartPlay.png" alt="" class="nav__img">
                     <span class="nav__name">Как начать играть?</span>
                 </div>
-              </a>
+              </router-link>
           </li>
 
           <li>
-              <a href="#" class="nav__href">
+              <router-link to="" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/TopPlayers.png" alt="" class="nav__img">
                     <span class="nav__name">Топ игроков</span>
                 </div>
-              </a>
+              </router-link>
           </li>
 
           <li>
-              <a href="#" class="nav__href">
+              <router-link to="" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/VK.png" alt="" class="nav__img">
                     <span class="nav__name">Вконтакте</span>
                 </div>
-              </a>
+              </router-link>
           </li>
       </ul>
       </div>

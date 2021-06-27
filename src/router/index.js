@@ -10,17 +10,17 @@ const routes = [
     name: 'Main',
     component: Main
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import( '../views/About.vue')
-  // },
-  // {
-  //   path: '/NewItemsPage',
-  //   name: 'NewItemsPage',
+  {
+    path: '/politics',
+    name: 'Politics',
+    component: () => import( '../views/Politics.vue')
+  },
+  {
+    path: '/HowStartToPlay',
+    name: 'HowStartPlay',
 
-  //   component: () => import( '../views/NewItemsPage.vue')
-  // },
+    component: () => import( '../views/HowStartPlay.vue')
+  },
 
   // {
   //   path: '/keys',
