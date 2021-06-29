@@ -1,18 +1,35 @@
 
 <template>
-  <li class="item">
+  <li class="item"
+    @click="popup.active = !popup.active"
+  >
       <img src="@/assets/contentBlock/Pic.png" alt="" class="item-img">
       <span class="item-header">Статус GUARD</span>
       <span class="item-text">Стань частичкой великого!</span>
 
       <button type="button" class="action">Action</button>
+
+      <PrivilegePopup 
+        v-show="popup.active"
+      />
   </li>
 </template>
 
 <script>
+import PrivilegePopup from '@/components/content/privilege/PrivilegePopup'
 
 export default {
     name: 'PrivilegeItem',
+    data(){
+        return {
+            popup: {
+                active: false,
+            }
+        }
+    },
+    components: {
+        PrivilegePopup
+    }
 }
 
 </script>

@@ -1,7 +1,7 @@
 <template>
   <article class="popup">
         <div class="body"
-            @click="event.stopPropagation();"
+            @click="stopClick"
         >
             <span class="btn-close">&times;</span>
 
@@ -30,6 +30,10 @@
             </section>
 
             <form action="" class="form-amount">
+                 <label class="label-block">
+                    <input type="radio" name="amount" class="form-amount__radio first-radio" checked>
+                </label>
+                
                 <label class="label-block">
                     <input type="radio" name="amount" class="form-amount__radio">
                     <span class="form-amount__amount">16 шт.</span>
@@ -78,7 +82,7 @@
                     <label for="" class="main__form__label">
                         <input type="checkbox" class="main__form__label__input-checkbox">
                         <span class="main__form__label__heading-checkbox">
-                            Я согласен с условиями <a href="#">пользовательского соглашения</a>
+                            Я согласен с условиями <a href="#">пользовательского <br> соглашения</a>
                             </span>
                     </label>
 
@@ -94,6 +98,11 @@
 
 export default {
     name: 'BasicPopup',
+    methods: {
+        stopClick(event){
+            if(document.querySelector('.btn-close').textContent !== event.target.textContent)event.stopPropagation();
+        }
+    }
 }
 
 </script>
@@ -189,7 +198,6 @@ export default {
 
 .form-amount{
     display: flex;
-    justify-content: space-around;
 
     margin: 50px 7.8% 0 7.8%;
 
@@ -202,6 +210,10 @@ export default {
 
 .label-block{
     display: block;
+
+    margin: 0 11.5% 0 0;
+
+    font-size: 12px;
 }
 
 .form-amount__radio, .form-amount__amount{
@@ -210,9 +222,31 @@ export default {
 }
 .form-amount__radio{
     margin: 0 auto;
+
+    
 }
+.first-radio{
+    margin: 0 0 0 12px;
+    opacity: 0;
+}
+.form-amount__radio.first-radio:checked {
+    margin: -6px 0 0 -12px;
+    opacity: 1;
+    display: block;
+}
+
+.form-amount__radio:checked{
+    filter: grayscale(100%);
+
+    width: 25px;
+    height: 25px;
+
+    margin: -6px 0 0 6px;
+}
+
 .form-amount__amount{
     margin: 10px 0 0 0;
+    width: 40px;
 }
 .numbers{
     display: flex;
@@ -264,6 +298,7 @@ export default {
 }
 
 .body{
+    /* max-width: 760px; */
     width: 40%;
     height: 643px;
 
@@ -307,5 +342,9 @@ export default {
 }
 .heading-text{
     color: rgba(30, 30, 39, 0.5); 
+}
+
+.main__form__label__heading-checkbox{
+    font-size: 14px;
 }
 </style>

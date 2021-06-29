@@ -12,7 +12,9 @@
             Попытай удачу и скрафти самую топовую привилегию!
         </span>
 
-        <BasicPopup v-show="popup.active"/>
+        <BasicPopup
+            v-show="popup.active"
+        />
     </li>
 </template>
 
