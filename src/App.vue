@@ -35,6 +35,12 @@ export default {
     font-weight: normal;
 }
 @font-face {
+    font-family: VictorMono-Bold;
+    src: url(static/VictorMono/VictorMono-Bold.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
     font-family: Gilroy-Regular;
     src: url(static/Gilroy/Gilroy-Regular.ttf);
     font-style: normal;
@@ -134,6 +140,29 @@ export default {
         height: 0;
         /* border-width: 7px 0 7px 14px; */
         color:blue;
+    }
+
+
+
+    .castom-scroll-two::-webkit-scrollbar {
+    width: 41px;
+    height: 41px;
+    border-right: 20px solid #fff;
+    border-left: 20px solid #fff;
+    background-color: #1E1E27;
+        
+    }
+    .castom-scroll-two::-webkit-scrollbar-track-piece{
+    width: 3px;
+            
+    }
+
+    .castom-scroll-two::-webkit-scrollbar-thumb{
+        background-color: #1E1E27;
+        width: 3px;
+        border-right: 18px solid #fff;
+        border-left: 18px solid #fff;
+        border-radius: 19px;
     }
 /* 
 @media screen and (max-width: 1024px) { */

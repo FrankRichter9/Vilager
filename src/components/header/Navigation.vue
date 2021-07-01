@@ -21,7 +21,9 @@
               </router-link>
           </li>
 
-          <li>
+          <li
+            @click="popup.active = !popup.active;"
+          >
               <router-link to="" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/TopPlayers.png" alt="" class="nav__img">
@@ -40,13 +42,30 @@
           </li>
       </ul>
       </div>
+
+      <PlayerRating
+        @close="popup.active = false; document.body.style.overflowY = 'scroll';"
+        v-show="popup.active"
+       />
   </nav>
 </template>
 
 <script>
+import PlayerRating from '@/components/header/PlayerRating'
 
 export default {
     name: 'Navigation',
+    components : {
+        PlayerRating
+    },
+    data(){
+        return {
+            popup: {
+                active: false,
+            }
+        }
+    },
+    
 }
 
 </script>

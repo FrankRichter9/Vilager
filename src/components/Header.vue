@@ -1,7 +1,11 @@
 <template>
   <header class="main-header">
-      <HeaderInfo />
+      <HeaderInfo
+
+       />
       <Navigation />
+
+      
   </header>
 </template>
 
@@ -9,11 +13,17 @@
 import HeaderInfo from '@/components/header/HeaderInfo'
 import Navigation from '@/components/header/Navigation'
 
+
 export default {
     name: '',
     components: {
       HeaderInfo,
-      Navigation
+      Navigation,
+    },
+    data(){
+      return {
+        
+      }
     }
 }
 
