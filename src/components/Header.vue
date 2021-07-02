@@ -5,13 +5,14 @@
        />
       <Navigation />
 
-      
+      <Basket />
   </header>
 </template>
 
 <script>
 import HeaderInfo from '@/components/header/HeaderInfo'
 import Navigation from '@/components/header/Navigation'
+import Basket from '@/components/Basket'
 
 
 export default {
@@ -19,6 +20,7 @@ export default {
     components: {
       HeaderInfo,
       Navigation,
+      Basket
     },
     data(){
       return {

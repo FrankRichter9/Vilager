@@ -4,15 +4,33 @@
           25 игровых- <br> Косметических ключей
       </span>
       <img src="@/assets/gaming-goods/game-item/img.png" alt="" class="item__img">
-      <button type="button" class="item__btn btn-one">Action</button>
+      <button type="button" class="item__btn btn-one"
+        @click="popup.active = !popup.active"
+      >Action</button>
       <button type="button" class="item__btn btn-two">Action</button>
+
+      <GameGoodsPopup
+        v-show="popup.active"
+        @close="popup.active = false;"
+       />
   </li>
 </template>
 
 <script>
+import GameGoodsPopup from '@/components/content/gaming goods/GameGoodsPopup'
 
 export default {
     name: 'GameItem',
+    components: {
+        GameGoodsPopup
+    },
+    data(){
+        return {
+            popup: {
+                active: false,
+            }
+        }
+    }
 }
 
 </script>
