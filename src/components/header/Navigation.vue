@@ -121,4 +121,25 @@ export default {
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 760px) {
+    .nav{
+        width: 80%;
+    }
+    .nav__list{
+        flex-direction: column;
+
+        background-color: rgba(20, 20, 20, 1);
+
+        
+    }
+
+    .nav__name{
+        font-size: 4.375vw;
+    }
+
+    .nav__item{
+        padding: 25px 0;
+    }
+}
 </style>

@@ -42,7 +42,19 @@ export default {
     padding: 40px 0 0 0;
 }
 
-.footer-nav{
-    
+
+
+@media screen and (max-width: 760px) {
+    .footer-nav__list{
+        flex-direction: column;
+
+        margin: 0 0 0 5%;
+    }
+    .footer-list__item{
+        margin: 0;
+    }
+    .footer-list__item:first-child{
+        margin: 60px 0 15px 0;
+    }
 }
 </style>

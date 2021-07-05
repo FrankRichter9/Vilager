@@ -32,4 +32,18 @@ export default {
 .footer-list__item{
     margin: 0 1.8%;
 }
+
+@media screen and (max-width: 760px) {
+    .footer-info__list{
+        flex-direction: column;
+    }
+
+    .footer-list__item{
+        margin: 30px 0 0 5%;
+    }
+
+    .footer-list__item:last-child{
+        margin-bottom: 20px;
+    }
+}
 </style>

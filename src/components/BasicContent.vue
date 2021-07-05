@@ -53,4 +53,28 @@ export default {
 
     width: 100%;
 }
+
+@media screen and (max-width: 760px) {
+    .basic-content{
+        height: 1346px;
+
+        display: flex;
+        flex-flow: column wrap;
+
+        padding: 70px 0 0 0;
+
+        background-size: 500%;
+    }
+
+    .main-items-list{
+        flex-flow: column wrap;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        width: 100%;
+    }
+}
 </style>

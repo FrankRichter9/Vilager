@@ -51,4 +51,10 @@ export default {
     .privilege-list li:last-child {
         margin: 0;
     }
+
+@media screen and (max-width: 1024px) {
+    .privilege-list{
+        margin: 50px 0 40px 5%;
+    }
+}
 </style>

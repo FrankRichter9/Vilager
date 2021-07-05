@@ -164,7 +164,6 @@ export default {
         border-left: 18px solid #fff;
         border-radius: 19px;
     }
-/* 
-@media screen and (max-width: 1024px) { */
+
 
 </style>

@@ -41,10 +41,17 @@ export default {
 .main-items-list__item{
     display: block;
 
-    width: 360px;
+    width: 25%;
     height: 402px;
 
     cursor: pointer;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-items-list__item:hover .hover{
@@ -57,8 +64,13 @@ export default {
 
     background-color: #FFA133;
 
+    
+    
+    transform-origin: center;
     transform: rotate(45deg);
-    margin: 0 auto;
+
+    /* margin: 0 auto; */
+   
     margin-top: 62px;
 }
 
@@ -107,10 +119,18 @@ export default {
     align-items: center;
     justify-content: center;
 
+    width: 15%;
     position: absolute;
-    width: 360px;
+    
     height: 402px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+}
+
+
+@media screen and (max-width: 760px) {
+    .main-items-list__item{
+        width: 95%;
+    }
 }
 </style>

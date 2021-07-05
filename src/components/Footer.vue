@@ -30,4 +30,9 @@ export default {
     height: 140px;
 }
     
+@media screen and (max-width: 760px) {
+    .main-footer{
+        height: 380px;
+    }
+}
 </style>

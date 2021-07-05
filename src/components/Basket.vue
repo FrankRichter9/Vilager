@@ -66,4 +66,11 @@ export default {
  .basket:hover .static{
      display: none;
  }
+
+ @media screen and (max-width: 760px) {
+      .basket{
+          display: none;
+      }
+ }
+
 </style>

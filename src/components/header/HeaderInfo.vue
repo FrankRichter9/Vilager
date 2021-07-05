@@ -57,4 +57,31 @@ export default {
 .counter__player{
     color: #0f0;
 }
+
+
+
+@media screen and (max-width: 760px) {
+
+    .other__projects{
+        display: none;
+    }
+
+    .full-info{
+        width: 80%;
+        
+    }
+
+    .header__info{
+        background-color: #141414;
+    }
+
+    .online__VillageMC{
+        width: 80%;
+        margin: 40px 0 35px 0;
+    }
+
+    .header__info{
+        justify-content: start;
+    }
+}
 </style>
