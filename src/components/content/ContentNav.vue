@@ -69,7 +69,7 @@ export default {
     padding: 60px 0 0 0;
     margin: 0 0 0 13%;
 
-    overflow-x: scroll;
+    
 }
 
 .nav-item{
@@ -91,6 +91,10 @@ export default {
 @media screen and (max-width: 1024px) {
   .item-href{
     font-size: 26px;
+  }
+
+  .nav-list{
+    overflow-x: scroll;
   }
 }
 </style>

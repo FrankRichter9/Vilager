@@ -30,6 +30,7 @@
       </div>
 
       <img src="@/assets/basic/transition.png" alt="" class="transition">
+      <img src="@/assets/contentBlock/transition.png" alt="" class="transition transition-mobile">
   </article>
 </template>
 
@@ -51,8 +52,8 @@ export default {
 }
 
 .minecraft-window{
-  width: 960px;
-  height: 431px;
+  width: 65%;
+  /* height: 431px; */
 
   background-color: #0f0;
 
@@ -101,9 +102,9 @@ export default {
 .minecraft-window__btn{
   display: block;
 
-  margin: 25px 0 0 60px;
+  margin: 25px 0 25px 60px;
 
-  width: 398px;
+  width: 370px;
   background: url("../../assets/how_start_play/mc-button.png");
 
   font-family: Minecraft;
@@ -118,4 +119,61 @@ export default {
 .minecraft-window__list{
   margin: 25px 0 0 120px;
 }
+
+.transition-mobile{
+  display: none;
+}
+@media screen and (max-width: 1220px) {
+  .transition{
+      display: none;
+  }
+  .transition-mobile{
+      padding-top: 80px;
+      display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .minecraft-window{
+    width: 90%;
+    /* height: 431px; */
+  }
+
+  .minecraft-window__btn, .minecraft-window__input{
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .minecraft-window{
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  
+
+  
+}
+@media screen and (max-width: 760px) {
+  .minecraft-preview{
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 550px) {
+    .minecraft-window__text{
+      margin: 10px 0 0 30px;
+    }
+
+    .minecraft-window__btn, .minecraft-window__text{
+      margin-left: 15px;
+    }
+
+    .minecraft-window__list{
+      display: block;
+      margin-left: 45px;
+    }
+
+    
+  }
+
 </style>

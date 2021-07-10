@@ -211,4 +211,10 @@ export default {
     margin: -100px 0 0 ;
 
 }
+
+@media screen and (max-width: 1220px) {
+    .minecraft-preview{
+        display: none;
+    }
+}
 </style>

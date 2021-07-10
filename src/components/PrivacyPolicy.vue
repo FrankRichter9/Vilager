@@ -256,4 +256,20 @@ export default {
     .list__item{
         margin: 19px 0 0 0;
     }
+
+    @media screen and (max-width: 900px) {
+        .header{
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        .heading{
+            font-size: 25px;
+        }
+
+        .container{
+            padding: 100px 20px;
+        }
+        
+    }
 </style>

@@ -3,7 +3,10 @@
         <div class="body"
             @click="stopClick"
         >
+
+        
             <span class="btn-close">&times;</span>
+            <div class="block-close">Закрыть</div>
 
             <ul class="nav">
                 <li class="nav__item item-active">Приобрести Изюмы</li>
@@ -100,7 +103,8 @@ export default {
     name: 'BasicPopup',
     methods: {
         stopClick(event){
-            if(document.querySelector('.btn-close').textContent !== event.target.textContent)event.stopPropagation();
+            if(document.querySelector('.btn-close').textContent !== event.target.textContent && document.querySelector('.block-close').textContent !== event.target.textContent)event.stopPropagation();
+            
         }
     }
 }
@@ -108,6 +112,10 @@ export default {
 </script>
 
 <style scoped>
+.block-close{
+    display: none;
+}
+
 .promocode{
     width: 90%;
     display: flex;
@@ -160,9 +168,10 @@ export default {
     margin: 0 0 5px 0;
 }
 .main__form__label__input-text, .main__form__btn{
+    box-sizing: border-box;
     padding: 20px;
 
-    width: 80%;
+    width: 90%;
 
     font-size: 15px;
     line-height: 17px;
@@ -199,6 +208,8 @@ export default {
 .form-amount{
     display: flex;
 
+    justify-content: space-between;
+
     margin: 50px 7.8% 0 7.8%;
 
     height: 14px;
@@ -211,7 +222,7 @@ export default {
 .label-block{
     display: block;
 
-    margin: 0 11.5% 0 0;
+    /* margin: 0 11.5% 0 0; */
 
     font-size: 12px;
 }
@@ -300,7 +311,7 @@ export default {
 .body{
     /* max-width: 760px; */
     width: 40%;
-    height: 643px;
+    /* height: 643px; */
 
     background-color: #fff;
 
@@ -316,6 +327,10 @@ export default {
     float: right;
 
     margin: 5px 20px;
+}
+
+.main__form__btn{
+    margin-bottom: 20px;
 }
 
 .nav{
@@ -346,5 +361,110 @@ export default {
 
 .main__form__label__heading-checkbox{
     font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .body{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .body{
+        width: 100%;
+    }
+
+    .nav{
+        overflow-x: scroll;
+    }
+
+    .heading{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .numbers__block{
+        width: 50px;
+    }
+
+    .heading-text{
+        width: 135px;
+    }
+
+    .label-block{
+        /* margin: 0 10% 0 0; */
+    }
+
+    .main__img{
+        display: none;
+    }
+
+    .main__form{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .promocode{
+        width: 100%;
+    }
+
+    .main__form__label__input-text, .main__form__btn{
+        width: 100%;
+    }
+
+    .main__form__btn{
+        margin-top: 20px;
+    }
+
+    .btn-close{
+        display: none;
+    }
+
+    .block-close{
+        display: block;
+
+        font-family: Gilroy-Regular;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        background-color: #141414;
+
+        box-sizing: border-box;
+        padding: 15px 10px;
+
+        text-decoration: underline;
+
+        height: 56px;
+
+        text-align: right;
+
+        color: #fff;
+    }
+
+    .body{
+        overflow-y: scroll;
+    }
+
+    .nav__item{
+        margin-top: 10px;
+    }
+    .form-amount, .numbers{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .nav__item{
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .main__form__label__input-text, .main__promocode__input-text{
+        padding: 15px;
+    }
+
+    .main__form__btn{
+        margin-bottom: 10px;
+    }
 }
 </style>

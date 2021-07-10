@@ -3,7 +3,9 @@
         <div class="body"
             @click="stopClick"
         >
-        
+            <div class="block-close">Закрыть</div>
+
+            <section class="content">
            <div class="color-block">
                
                    <button type="button" class="arrow">&#9668;</button>
@@ -138,6 +140,7 @@
                 </div>
                 
            </section>
+           </section>
         </div>
   </article>
 </template>
@@ -153,7 +156,7 @@ export default {
     },
     methods: {
         stopClick(event){
-            if(document.querySelector('.btn-close').textContent !== event.target.textContent)event.stopPropagation();
+            if(document.querySelector('.btn-close').textContent !== event.target.textContent && document.querySelector('.block-close').textContent !== event.target.textContent)event.stopPropagation();
         }
     }
 }
@@ -161,6 +164,10 @@ export default {
 </script>
 
 <style scoped>
+
+.content{
+    width: 100%;
+}
 .arrow{
     display: block;
 
@@ -186,6 +193,14 @@ export default {
 
 .main-content_block{
     margin: 0 0 0 200px;
+}
+
+.content{
+    display: flex;
+}
+
+.block-close{
+    display: none;
 }
 
 .popup{
@@ -443,5 +458,145 @@ export default {
     background-color: rgba(240, 241, 243, 1);
 
     border: none;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .block-close{
+        display: block;
+
+        font-family: Gilroy-Regular;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        background-color: #141414;
+
+        box-sizing: border-box;
+        padding: 15px 10px;
+
+        text-decoration: underline;
+
+        height: 56px;
+
+        text-align: right;
+
+        color: #fff;
+    }
+
+    .body{
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .content{
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .main-img{
+        width: 180px;
+
+        margin: 0 auto;
+
+        margin-top: 50px;
+    }
+
+    .color-block{
+        width: 100%;
+        height: 174px;
+    }
+
+    .main-content{
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .body{
+        height: 100vh;
+        overflow-y: scroll;
+
+    }
+
+    .popup{
+        align-items: flex-start;
+    }
+
+    .btn-close{
+        display: none;
+    }
+    
+    
+
+    .main-content__status{
+        margin: 50px 0 0 0;
+        margin-left: 10px;
+    }
+    .main-content__small-status{
+        margin-left: 10px;
+    }
+
+    .main-content_block{
+        margin: 0 auto;
+    }
+
+    .main-content__text-list{
+        width: 96%;
+        margin-left: 10px;
+    }
+
+    .main-content__main-btn{
+        width: 95%;
+
+        margin: 30px auto;
+        margin-left: 10px;
+    }
+
+    .buttons-list__item__btn{
+        width: 100%;
+        
+    }
+
+    .main-content__buttons-list{
+        width: 95%;
+        margin: 0 0 0 10px;
+
+    }
+
+    .buttons-list__item{
+        width: 32%;
+    }
+
+    .buttons-list__item__btn{
+        padding: 14px 10px;
+    }
+
+    .insurance-text{
+        font-size: 14px;
+    }
+
+    .main-content__insurance{
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .main__form{
+        width: 95%;
+        margin: 0 0 0 10px;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .main-content__text-list{
+
+    }
 }
 </style>

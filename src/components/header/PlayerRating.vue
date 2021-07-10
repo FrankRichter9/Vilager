@@ -127,7 +127,7 @@ export default {
     top: 0;
     left: 0;
 
-    z-index: 999;
+    z-index: 99999;
 
     display: flex;
     justify-content: center;
@@ -178,20 +178,16 @@ export default {
 .slider{
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
     margin: 0 0 50px 0;
 }
-.slider__arrow-1{
+/* .slider__arrow-1{
     margin: 0 7.9% 0 26.3%;
-
-    /* margin: 0 60px 0 200px; */
 }
 
 .slider__arrow-2{
     margin: 0 26.3% 0 7.9%;
-
-    /* margin: 0 200px 0 60px; */
-}
+} */
 
 .slider__text{
     display: block;
@@ -296,4 +292,24 @@ export default {
     .castom-scroll-two::-webkit-scrollbar-thumb{
        border-color: #FDF8EB;
     }
+
+
+@media screen and (max-width: 900px) {
+    .body{
+        width: 100vw;
+        height: 100vh;
+
+        overflow-y: scroll;
+    }
+
+    .main-table{
+        width: 95%;
+
+        margin: 0 auto;
+    }
+
+    .table-head{
+        margin-bottom: 40px;
+    }
+}
 </style>

@@ -37,6 +37,8 @@ export default {
     display: flex;
     justify-content: start;
 
+    flex-wrap: wrap;
+
     margin: 50px 0 0 13%;
 }
 .gaming-goods-item__btn{
@@ -47,6 +49,8 @@ export default {
 
     cursor: pointer;
 
+    margin: 20px 0 0 0;
+
     color: #fff;
 }
 .gaming-goods__item{
@@ -54,5 +58,9 @@ export default {
 }
 .active{
     background-color: rgba(30, 30, 39, 1);
+}
+
+@media screen and (max-width: 900px) {
+
 }
 </style>

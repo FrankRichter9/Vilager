@@ -5,7 +5,12 @@
         <div class="body"
             @click="stopClick"
         >
+            <div class="block-close">Закрыть</div>
+
             <span class="btn-close">&times;</span>
+
+            <span class="heading">25 игровых - Косметических ключей</span>
+
             <hr class="line">
         
             
@@ -50,7 +55,8 @@
                      <button type="button" class="main-content__main-btn">Action</button>
                 </form>
                </section>
-            </section>
+               </section>
+            
 
                
 
@@ -73,7 +79,7 @@ export default {
     name: 'GameGoodsPopup',
     methods: {
         stopClick(event){
-            if(document.querySelector('.btn-close').textContent !== event.target.textContent)event.stopPropagation();
+            if(document.querySelector('.btn-close').textContent !== event.target.textContent && document.querySelector('.block-close').textContent !== event.target.textContent)event.stopPropagation();
         }
     }
 }
@@ -81,6 +87,10 @@ export default {
 </script>
 
 <style scoped>
+.heading{
+    display: none;
+}
+
 .btn-close{
     float: right;
 
@@ -110,7 +120,7 @@ export default {
 
 .body{
     width: 898px;
-    height: 585px;
+    /* height: 585px; */
 
     background-color: #fff;
 
@@ -193,7 +203,9 @@ export default {
     margin: 30px 0 0 0;
 }
 
-
+.block-close{
+    display: none;
+}
 
 .promocode{
     width: 100%;
@@ -298,7 +310,7 @@ export default {
     border: none;
     border-radius: 2px;
 
-    margin: 30px 0 0 0;
+    margin: 30px 0 ;
 
     background-color: rgba(37, 195, 11, 1);
 
@@ -309,5 +321,76 @@ export default {
     line-height: 19px;
 
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .popup{
+        align-items: flex-start;
+    }
+
+    .heading{
+        display: block;
+
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+
+    }
+    .block-close{
+        display: block;
+
+        font-family: Gilroy-Regular;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        background-color: #141414;
+
+        box-sizing: border-box;
+        padding: 15px 10px;
+
+        text-decoration: underline;
+
+        height: 56px;
+
+        text-align: right;
+
+        color: #fff;
+    }
+
+    .btn-close{
+        display: none;
+    }
+
+    .heading{
+        margin: 30px auto;
+        width: 95%;
+
+        
+    }
+
+    .line{
+        margin: 0 auto 30px auto;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .main-text-block, .main-form{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .main-form{
+        margin: 30px 0 0 0;
+    }
+
+    .body{
+        height: 100vh;
+        overflow-y: scroll;
+    }
 }
 </style>
