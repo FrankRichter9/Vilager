@@ -119,7 +119,7 @@ export default {
     align-items: center;
     justify-content: center;
 
-    width: 15%;
+    width: 20%;
     position: absolute;
     
     height: 402px;
@@ -131,6 +131,10 @@ export default {
 @media screen and (max-width: 760px) {
     .main-items-list__item{
         width: 95%;
+    }
+
+    .hover{
+        width: 60%;
     }
 }
 </style>

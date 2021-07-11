@@ -1,5 +1,7 @@
 <template>
-  <header class="main-header">
+  <header class="main-header"
+    :class="{min_height_main_header: !menu.open}"
+  >
     <button class="btn btn-menu-open"
       v-show="!menu.open"
       @click="menu.open = true"
@@ -14,6 +16,13 @@
       <Navigation 
         v-show="menu.open"
       />
+      <div class="other__projects"
+        v-show="menu.open"
+      >
+            <span class="other__projects-header">Другие проекты:</span>
+            <a href="#">Скрафтиголову.store</a>
+            <a href="#">Магазин аккаунтов</a>
+      </div>
       
       <Basket />
   </header>
@@ -55,6 +64,11 @@ export default {
 
 }
 
+.other__projects{
+  display: none;
+}
+
+
 .btn{
   border: none;
 
@@ -62,7 +76,7 @@ export default {
 
   display: block;
   width: 100%;
-  background-color: #141414;
+  background-color: #0A0A0A;
 
   color: #fff;
 
@@ -81,9 +95,49 @@ export default {
   text-align: right;
 }
 
+.btn-menu-open, .btn-menu-close{
+  height: 56px;
+  font-size: 40px;
+}
+
 @media screen and (max-width: 760px) {
   .btn{
     display: block;
+  }
+  .other__projects{
+    display: block;
+
+    font-family: VictorMono-Medium;
+
+    background-color: #0A0A0A;
+
+    width: 80%;
+
+    box-sizing: border-box;
+    padding: 0 3.208333333333333% 40px 3.208333333333333%;
+  }
+
+  .other__projects a{
+    display: block;
+
+    margin: 0 0 20px 0;
+
+    text-decoration: none;
+
+    color: #fff;
+  }
+
+  .other__projects-header{
+    display: block;
+
+    margin: 0 0 20px 0;
+  }
+
+  .main-header{
+    height: 600px;
+  }
+  .min_height_main_header{
+    height: 56px;
   }
 }
 </style>

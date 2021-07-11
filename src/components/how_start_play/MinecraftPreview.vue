@@ -27,6 +27,39 @@
 
           <button type="button" class="minecraft-window__btn" disabled>Готово</button>
         </section>
+      
+
+      <section class="mobile-block">
+        <section class="mobile-block__btns">
+          <ul class="mobile-block__btns-list">
+            <li class="mobile-block__btns-list__item">
+              <button type="button" class="mobile-block__btns-list__item__btn  mobile-block__btns-list__item__btn-active">
+                  Action
+              </button>
+            </li>
+            <li class="mobile-block__btns-list__item">
+              <button type="button" class="mobile-block__btns-list__item__btn">
+                  Action
+              </button>
+            </li>
+            <li class="mobile-block__btns-list__item">
+              <button type="button" class="mobile-block__btns-list__item__btn">
+                  Action
+              </button>
+            </li>
+            <li class="mobile-block__btns-list__item">
+              <button type="button" class="mobile-block__btns-list__item__btn">
+                  Action
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mobile-block__img-block">
+          <img src="" alt="" width="300px" height="190px" class="mobile-block__img-block__img">
+        </section>
+      </section>
+
       </div>
 
       <img src="@/assets/basic/transition.png" alt="" class="transition">
@@ -43,6 +76,16 @@ export default {
 </script>
 
 <style scoped>
+
+.mobile-block{
+  display: none;
+}
+.container{
+  display: flex;
+
+  flex-direction: column;
+}
+
 .transition{
     display: block;
 
@@ -123,6 +166,68 @@ export default {
 .transition-mobile{
   display: none;
 }
+
+
+
+
+.mobile-block{
+  margin: 80px auto 0 auto;
+
+  width: 90%;
+}
+
+.mobile-block__btns-list{
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.mobile-block__btns-list__item__btn{
+  padding: 13.5px 30px;
+
+  background-color: #2A2E2C;
+
+  margin: 10px 20px;
+
+  color: #fff;
+  font-family: Gilroy-Regular;
+
+  border: none;
+
+}
+
+.mobile-block__btns-list__item__btn-active{
+  background-color: #1E1E27;
+}
+
+.mobile-block__img-block{
+  margin: 40px 0 20px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* .mobile-block__img-block__img{
+  width: 90%;
+  display: block;
+
+  margin: 0 auto;
+} */
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1220px) {
   .transition{
       display: none;
@@ -131,6 +236,10 @@ export default {
       padding-top: 80px;
       display: block;
   }
+
+  .mobile-block{
+      display: block;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -150,14 +259,14 @@ export default {
     line-height: 16px;
   }
 
-  
 
   
 }
 @media screen and (max-width: 760px) {
   .minecraft-preview{
-    margin-top: 90px;
+    margin-top: 50px;
   }
+  
 }
 @media screen and (max-width: 550px) {
     .minecraft-window__text{
@@ -173,6 +282,7 @@ export default {
       margin-left: 45px;
     }
 
+    
     
   }
 

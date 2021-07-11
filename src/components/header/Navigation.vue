@@ -74,7 +74,7 @@ export default {
 .nav{
     height: 84px;
 
-    background-color: #141414;
+    background-color: #0A0A0A;
 }
 
 .nav__href{
@@ -125,18 +125,20 @@ export default {
 @media screen and (max-width: 760px) {
     .nav{
         width: 80%;
+        height: 420px;
     }
     .nav__list{
         flex-direction: column;
 
-        background-color: rgba(20, 20, 20, 1);
+        background-color: #0A0A0A;
+        font-size: 14px;
 
         
     }
 
-    .nav__name{
+    /* .nav__name{
         font-size: 4.375vw;
-    }
+    } */
 
     .nav__item{
         padding: 25px 0;

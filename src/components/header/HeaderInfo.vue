@@ -58,12 +58,32 @@ export default {
     color: #0f0;
 }
 
-
+@media screen and (max-width: 1240px) {
+    .header__info{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .other__projects{
+        width: 90%;
+        text-align: center;
+    }
+    .online__VillageMC{
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 760px) {
+    .header__info{
+        flex-direction: row;
+        justify-content: start;
+    }
 
     .other__projects{
         display: none;
+    }
+    .online__VillageMC{
+        text-align: left;
+        margin: 40px 3.208333333333333%;
     }
 
     .full-info{
@@ -72,12 +92,12 @@ export default {
     }
 
     .header__info{
-        background-color: #141414;
+        background-color: #0A0A0A;
     }
 
     .online__VillageMC{
         width: 80%;
-        margin: 40px 0 35px 0;
+        /* margin: 40px 0 35px 0; */
     }
 
     .header__info{
