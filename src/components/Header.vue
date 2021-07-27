@@ -44,7 +44,7 @@ export default {
     data(){
       return {
         menu: {
-          open: true,
+          open: window.innerWidth <= 750 ? false : true
         }
       }
     }

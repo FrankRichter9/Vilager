@@ -4,7 +4,7 @@
       <ul class="nav__list">
           <li>
               
-              <router-link to="" class="nav__href">
+              <router-link to="/" class="nav__href">
                 <div class="nav__item">
                     <img src="@/assets/header/navigation/Main.png" alt="" class="nav__img">
                     <span class="nav__name">Магазин</span>
@@ -15,7 +15,7 @@
           <li>
               <router-link to="/HowStartToPlay" class="nav__href">
                 <div class="nav__item">
-                    <img src="@/assets/header/navigation/HowStartPlay.png" alt="" class="nav__img">
+                    <img src="@/assets/header/navigation/HowStartPlay.gif" alt="" class="nav__img" >
                     <span class="nav__name">Как начать играть?</span>
                 </div>
               </router-link>
@@ -26,7 +26,7 @@
           >
               <router-link to="" class="nav__href">
                 <div class="nav__item">
-                    <img src="@/assets/header/navigation/TopPlayers.png" alt="" class="nav__img">
+                    <img src="@/assets/header/navigation/TopPlayers.gif" alt="" class="nav__img" width="45px" height="45px">
                     <span class="nav__name">Топ игроков</span>
                 </div>
               </router-link>
@@ -35,7 +35,7 @@
           <li>
               <router-link to="" class="nav__href">
                 <div class="nav__item">
-                    <img src="@/assets/header/navigation/VK.png" alt="" class="nav__img">
+                    <img src="@/assets/header/navigation/VK.gif" alt="" class="nav__img">
                     <span class="nav__name">Вконтакте</span>
                 </div>
               </router-link>

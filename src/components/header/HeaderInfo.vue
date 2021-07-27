@@ -1,5 +1,5 @@
 <template>
-    <action class="full-info">
+    <article class="full-info">
         <div class="container header__info">
         <div class="other__projects">
             <span class="other__projects-header">Другие проекты:</span>
@@ -11,7 +11,7 @@
             <span>На сервере VillageMC: <span class="counter__player">324 игрока</span></span>
         </div>
         </div>
-    </action>
+    </article>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
     background-color: #0A0A0A;
 }
 .header__info{
-    font-family: VictorMono-Medium;
+    font-family: VictorMono-Regular;
     
 
     display: flex;

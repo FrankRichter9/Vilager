@@ -3,8 +3,9 @@
         <div class="container">
             <ul class="privilege-list castom-scroll">
                 <PrivilegeItem
-                    v-for="i in 8"
-                    :key="i"
+                    v-for="item in getItemsByType('privilege')"
+                    :key="item.id"
+                    :item="item"
                 />
             </ul>
         </div>
@@ -15,12 +16,31 @@
 
 <script>
 import PrivilegeItem from '@/components/content/privilege/PrivilegeItem'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
     name: 'Privilege',
+    data(){
+        return {
+            items: []
+        }
+    },
     components: {
         PrivilegeItem
-    }
+    },
+    methods: {
+        ...mapActions([
+            'getItems'
+            ]),
+    },
+    mounted(){
+        this.getItems()
+    },
+    computed: {
+        ...mapGetters([
+            'getItemsByType'
+        ])
+    },
 }
 
 </script>

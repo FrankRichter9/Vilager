@@ -4,8 +4,23 @@
   >
         <div class="hover">верстак появится чуточку позже</div>
       
-        <div class="color-square">
-            <img src="@/assets/basic/items/craftingTable.png" alt="" class="item__img">
+        <div class="color-square"
+            :class="{
+                square_red: item.color === '#FF5858',
+                square_orange: item.color === '#FFA133',
+                square_blue: item.color === '#5379FF',
+            }"
+        >
+           
+            <img src="@/assets/basic/items/craftingTable.gif" alt="" class="item__img item__gif"
+                v-show="item.ImgLink === '1'"
+            >
+            <img src="@/assets/basic/items/bake.gif" alt="" class="item__img item__gif"
+                v-show="item.ImgLink === '2'"
+            >
+            <img src="@/assets/basic/items/chest.gif" alt="" class="item__img item__gif"
+                v-show="item.ImgLink === '3'"
+            >
         </div>
         <span class="item__header">Верстак привилегий</span>
         <span class="item__text">
@@ -32,7 +47,8 @@ export default {
     },
     components: {
         BasicPopup
-    }
+    },
+    props: ['item']
 }
 
 </script>
@@ -79,7 +95,7 @@ export default {
     height: 173.22px;
 
     transform: rotate(-45deg);
-    margin: -20px 0 0 -10px;
+    margin: -10px 0 0 -10px;
 }
 
 .item__header{
@@ -90,6 +106,7 @@ export default {
     margin: 50px 0 0 0;
 
     font-size: 26px;
+    font-weight: 500;
 }
 
 .item__text{
@@ -127,6 +144,15 @@ export default {
     z-index: 10;
 }
 
+.square_red{
+    background-color: #FF5858;
+} 
+.square_orange{
+    background-color: #FFA133;
+} 
+.square_blue{
+    background-color: #5379FF;
+} 
 
 @media screen and (max-width: 760px) {
     .main-items-list__item{
@@ -137,4 +163,7 @@ export default {
         width: 60%;
     }
 }
+
+
+
 </style>

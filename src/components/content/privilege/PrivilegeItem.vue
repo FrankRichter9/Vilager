@@ -3,14 +3,15 @@
   <li class="item"
     @click="popup.active = !popup.active"
   >
-      <img src="@/assets/contentBlock/Pic.png" alt="" class="item-img">
-      <span class="item-header">Статус GUARD</span>
+      <img :src="item.imgLink" alt="" class="item-img" width="155px" height="155px">
+      <span class="item-header">{{item.displayName}}</span>
       <span class="item-text">Стань частичкой великого!</span>
 
       <button type="button" class="action">Action</button>
 
       <PrivilegePopup 
         v-show="popup.active"
+        :item="item"
       />
   </li>
 </template>
@@ -29,7 +30,8 @@ export default {
     },
     components: {
         PrivilegePopup
-    }
+    },
+    props: ['item']
 }
 
 </script>

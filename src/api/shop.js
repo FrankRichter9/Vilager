@@ -4,7 +4,7 @@ import Api from "@/api/index";
 export default class ShopApi extends Api {
     constructor() {
         const shopAx = axios.create({
-            baseURL: "https://api.zakvielshop.ru/api",
+            baseURL: process.env.VUE_APP_API_URL,
             headers: {
                 post: {        // can be common or any other method
                     "Content-Type": "application/json",
@@ -27,7 +27,8 @@ export default class ShopApi extends Api {
     }
 
     getItems() {
-        return this.send("/productGroups")
+        // return this.send("/productGroups")
+        return this.send("/products")
     }
 
     checkPrice(coupon, player, products) {

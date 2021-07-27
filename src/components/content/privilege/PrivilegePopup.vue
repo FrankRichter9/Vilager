@@ -10,7 +10,7 @@
                
                    <button type="button" class="arrow">&#9668;</button>
                
-               <img src="@/assets/contentBlock/PicBig.png" alt="" class="main-img">
+               <img :src="item.imgLink" alt="" class="main-img" width="340px" height="420px">
            </div>
            <section class="main-content">
                <div class="main-content_block">
@@ -29,7 +29,8 @@
                 >
                     
                     <span class="text-list">
-                        Skyblock <br>
+                        {{item.description}}
+                        <!-- Skyblock <br>
                         Доступ к команде /feed <br>
                         Доступ к команде /ptime <br>
                         Доступ к передаче спавнеров /spawner transfer <br>
@@ -81,7 +82,7 @@
                         Создание 6 варпов /warp set <br>
                         Соединение 3 участков /p merge <br>
                         Префикс Страж перед ником <br>
-                        Все возможности предыдущих привилегий <br>
+                        Все возможности предыдущих привилегий <br> -->
 
                     </span>
                 </section>
@@ -158,7 +159,8 @@ export default {
         stopClick(event){
             if(document.querySelector('.btn-close').textContent !== event.target.textContent && document.querySelector('.block-close').textContent !== event.target.textContent)event.stopPropagation();
         }
-    }
+    },
+    props: ['item']
 }
 
 </script>

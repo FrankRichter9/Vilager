@@ -15,30 +15,32 @@ export default {
         getItems({commit}) {
             const api = this;
 
-            this.$shopapi.getItems().then(function (items) {
-                items.map(function (item) {
-                    item["meta"].split(';').forEach(function (it) {
-                        if (it !== "") {
-                            let metaData = it.split(':');
-                            item[metaData[0]] = metaData.slice(1).join(':').trim();
-                        }
-                    });
-                    return item;
-                });
+            return this.$shopapi.getItems().then(function (items) {
+                // items.map(function (item) {
+                //     item["meta"].split(';').forEach(function (it) {
+                //         if (it !== "") {
+                //             let metaData = it.split(':');
+                //             item[metaData[0]] = metaData.slice(1).join(':').trim();
+                //         }
+                //     });
+                //     return item;
+                // });
                 // console.log(items)
                 commit("addItems", items);
+                return items
 
-                api.$caseapi.getAllCases().then(function (data) {
-                    commit("addCases", data);
-                    commit("addAllItems", api.$shopapi.getAllItems(items));
-                    commit("endLoad");
-                })
+                // api.$caseapi.getAllCases().then(function (data) {
+                //     commit("addCases", data);
+                //     commit("addAllItems", api.$shopapi.getAllItems(items));
+                //     commit("endLoad");
+                // })
             });
         }
     },
     getters: {
         getItemsByType: state => elType => {
-            return state.items.filter(i => i.products[0].category === elType);
+            console.log(state.items[1])
+            return state.items.filter(i => i.category === elType);
         },
         getItemsById: state => Id => {
             return state.items.find(item => {

@@ -2,9 +2,9 @@
     <div id="app">
         
             
-            <router-view v-if="!inLoading"/>
+            <router-view />
             
-        
+        <!-- v-if="!inLoading" -->
     </div>
 </template>
 
@@ -37,6 +37,12 @@ export default {
 @font-face {
     font-family: VictorMono-Bold;
     src: url(static/VictorMono/VictorMono-Bold.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: VictorMono-Regular;
+    src: url(static/VictorMono/VictorMono-Regular.ttf);
     font-style: normal;
     font-weight: normal;
 }

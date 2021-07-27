@@ -5,8 +5,9 @@
               
 
               <Item
-                v-for="i in 3"
-                :key="i"
+                v-for="item in items"
+                :key="item.id"
+                :item="item"
                />
           </ul>
       </div>
@@ -21,6 +22,15 @@ export default {
     name: 'BasicContent',
     components: {
         Item
+    },
+    data(){
+        return {
+            items: [
+                {id: '23', ImgLink: '2', color: '#FF5858'},
+                {id: '12', ImgLink: '1', color: '#FFA133'},
+                {id: '22', ImgLink: '3', color: '#5379FF'}
+            ]
+        }
     }
 }
 

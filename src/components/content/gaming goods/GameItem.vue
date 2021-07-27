@@ -71,6 +71,7 @@ export default {
     color: rgba(32, 32, 32, 1);
     font-family: Gilroy-Regular;
     font-size: 16px;
+    font-weight: 600;
 
     padding: 30px 0 20px 0;
 }
